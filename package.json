@@ -52,7 +52,13 @@
     "eslint-plugin-import": "^2.6.1",
     "husky": "^0.11.9",
     "mocha": "^3.2.0",
+    "mock-require": "^3.0.3",
     "nyc": "^10.2.0",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "sinon": "^7.2.3",
+    "sinon-chai": "^3.3.0"
+  },
+  "dependencies": {
+    "intl": "^1.2.5"
   }
 }

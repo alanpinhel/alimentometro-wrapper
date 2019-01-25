@@ -2,86 +2,107 @@
 
 Um wrapper para trabalhar com a [Relação de Fatores de Correção e Índice de Conversão (Cocção de Alimentos)](https://docs.ufpr.br/~monica.anjos/Fatores.pdf).
 
-## Getting Started
+## Navegadores Suportados
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Esta biblioteca faz uso da [API de internacionalização](https://caniuse.com/#feat=internationalization) que é suportada nos seguintes navegadores.
 
-### Prerequisities
+![Chrome](https://cloud.githubusercontent.com/assets/398893/3528328/23bc7bc4-078e-11e4-8752-ba2809bf5cce.png) | ![Firefox](https://cloud.githubusercontent.com/assets/398893/3528329/26283ab0-078e-11e4-84d4-db2cf1009953.png) | ![Opera](https://cloud.githubusercontent.com/assets/398893/3528330/27ec9fa8-078e-11e4-95cb-709fd11dac16.png) | ![Safari](https://cloud.githubusercontent.com/assets/398893/3528331/29df8618-078e-11e4-8e3e-ed8ac738693f.png) | ![IE](https://cloud.githubusercontent.com/assets/398893/3528325/20373e76-078e-11e4-8e3a-1cb86cf506f0.png) |
+--- | --- | --- | --- | --- |
+24+ ✔ | 29+ ✔ | 15+ ✔ | 10+ ✔ | 11+ ✔ |
 
-What things you need to install the software and how to install them
+## Instalação
 
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
+```sh
+$ npm install alimentometro-wrapper --save
 ```
 
-And repeat
+## Como usar
 
-```
-until finished
-```
+### ES6
 
-End with an example of getting some data out of the system or using it for a little demo
+```js
+// to import a specific method
+import SpotifyWrapper from 'spotify-wrapper';
 
-## Running the tests
+const spotify = new SpotifyWrapper({
+  token: 'YOUR_TOKEN_HERE'
+});
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+// using  method
+spotify.search.artists('Incubus');
 ```
 
-### And coding style tests
+### CommonJS
 
-Explain what these tests test and why
+```js
+const SpotifyWrapper = require('spotify-wrapper').default;
 
+const spotify = new SpotifyWrapper({
+  token: 'YOUR_TOKEN_HERE'
+});
 ```
-Give an example
+
+### UMD in Browser
+
+```html
+<!-- to import non-minified version -->
+<script src="spotify-wrapper.umd.js"></script>
+
+<!-- to import minified version -->
+<script src="spotify-wrapper.umd.min.js"></script>
 ```
 
-## Deployment
+After that the library will be available to the Global as `SpotifyWrapper`. Follow an example:
 
-Add additional notes about how to deploy this on a live system
+```js
 
-## Built With
+const spotify = new SpotifyWrapper({
+  token: 'YOUR_TOKEN_HERE'
+});
 
-* Dropwizard - Bla bla bla
-* Maven - Maybe
-* Atom - ergaerga
+const albums = spotify.search.albums('Choosen Artist');
+```
 
-## Contributing
+## Métodos
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+> Follow the methods that the library provides.
 
-## Versioning
+### search.albums(query)
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+> Search for informations about Albums with provided query. Test in [Spotify Web Console](https://developer.spotify.com/web-api/console/get-search-item/) with type defined as *album*.
 
-## Authors
+**Arguments**
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+| Argument | Type    | Options           |
+|----------|---------|-------------------|
+|`query`   |*string* | 'Any search query'|
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
+**Example**
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+```js
+spotify.search.albums('Incubus')
+  .then(data => {
+    // do what you want with the data
+  })
+```
 
-## Acknowledgments
+## Contribuição
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+Leia [CONTRIBUTING.md](CONTRIBUTING.md) para obter detalhes sobre o processo de envio de pull requests.
+
+## Versionamento
+
+É usado [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, veja as [tags](https://github.com/alanpinhel/alimentometro-wrapper/tags).
+
+## Autor
+
+| ![Alan Pinhel](https://avatars0.githubusercontent.com/u/22641949?s=80&v=3)|
+|:---------------------:|
+|  [Alan Pinhel](https://github.com/alanpinhel/)   |
+
+Veja a lista dos [contribuintes](https://github.com/alanpinhel/alimentometro-wrapper/contributors) que participaram deste projeto.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE.md](LICENSE.md) para detalhes.

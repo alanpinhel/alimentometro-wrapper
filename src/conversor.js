@@ -1,6 +1,6 @@
-let intl = require('intl');
+const intl = require('intl');
 
-export const converteParaPesagemHumana = peso => {
+export default function converteParaPesagemHumana(peso) {
   if (!peso) {
     return '0g';
   }
@@ -11,4 +11,4 @@ export const converteParaPesagemHumana = peso => {
 
   const pesoEmKg = intl.NumberFormat('pt').format(peso / 1000);
   return `${pesoEmKg}kg`;
-};
+}

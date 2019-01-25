@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import { converteParaPesagemHumana } from '../src/conversor';
+import converteParaPesagemHumana from '../src/conversor';
 
 describe('Conversor', () => {
   describe('smoke tests', () => {

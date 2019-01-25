@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import mock from 'mock-require';
 
-import { getPesoBrutoAlimentoPorId } from '../src/alimento';
+import getPesoBrutoAlimentoPorId from '../src/alimento';
 
 describe('Alimento', () => {
   const alimentos = [
@@ -20,11 +20,11 @@ describe('Alimento', () => {
   ];
 
   beforeEach(() => {
-    mock('../src/data/alimentos.json', alimentos);
+    mock('../src/alimentos.json', alimentos);
   });
 
   afterEach(() => {
-    mock.stop('../src/data/alimentos.json');
+    mock.stop('../src/alimentos.json');
   });
 
   describe('smoke tests', () => {

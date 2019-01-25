@@ -26,11 +26,11 @@ describe('Alimentos', () => {
   ];
 
   beforeEach(() => {
-    mock('../src/data/alimentos.json', alimentos);
+    mock('../src/alimentos.json', alimentos);
   });
 
   afterEach(() => {
-    mock.stop('../src/data/alimentos.json');
+    mock.stop('../src/alimentos.json');
   });
 
   describe('smoke tests', () => {
@@ -49,7 +49,7 @@ describe('Alimentos', () => {
 
   describe('getAlimentos', () => {
     it('getAlimentos() deve retornar o conteúdo do arquivo alimentos.json', () => {
-      mock('../src/data/alimentos.json', []);
+      mock('../src/alimentos.json', []);
       expect(getAlimentos()).to.deep.equal([]);
     });
   });

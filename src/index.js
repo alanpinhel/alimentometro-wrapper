@@ -1,15 +1,15 @@
 import {
   getAlimentos,
   getAlimentoPorId,
-  getAlimentosComNomeIniciadoPor
+  getAlimentosComNomeIniciadoPor,
 } from './alimentos';
 
 import {
-  getPesoBrutoAlimentoPorId
+  getPesoBrutoAlimentoPorId,
 } from './alimento';
 
 import {
-  converteParaPesagemHumana
+  converteParaPesagemHumana,
 } from './conversor';
 
 module.exports = {
@@ -17,5 +17,5 @@ module.exports = {
   getAlimentoPorId,
   getAlimentosComNomeIniciadoPor,
   getPesoBrutoAlimentoPorId,
-  converteParaPesagemHumana
+  converteParaPesagemHumana,
 };

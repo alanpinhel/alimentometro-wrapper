@@ -1,6 +1,8 @@
 # Alimentômetro Wrapper
 
-Um wrapper para trabalhar com a [Relação de Fatores de Correção e Índice de Conversão (Cocção de Alimentos)](https://docs.ufpr.br/~monica.anjos/Fatores.pdf).
+[![Build Status](https://travis-ci.org/alanpinhel/alimentometro-wrapper.svg?branch=master)](https://travis-ci.org/alanpinhel/alimentometro-wrapper)
+
+Wrapper para trabalhar com a [Relação de Fatores de Correção e Índice de Conversão (Cocção de Alimentos)](https://docs.ufpr.br/~monica.anjos/Fatores.pdf).
 
 ## Navegadores Suportados
 

@@ -1,6 +1,6 @@
 # Alimentômetro Wrapper
 
-[![Build Status](https://travis-ci.org/alanpinhel/alimentometro-wrapper.svg?branch=master)](https://travis-ci.org/alanpinhel/alimentometro-wrapper) [![Coverage Status](https://coveralls.io/repos/github/alanpinhel/alimentometro-wrapper/badge.svg?branch=master)](https://coveralls.io/github/alanpinhel/alimentometro-wrapper?branch=master) ![Badge size](https://badge-size.herokuapp.com/alanpinhel/alimentometro-wrapper/master/dist/alimentometro-wrapper.min.js.svg) ![Badge gzip size](https://badge-size.herokuapp.com/alanpinhel/alimentometro-wrapper/master/dist/alimentometro-wrapper.min.js.svg?compression=gzip)
+[![Build Status](https://travis-ci.org/alanpinhel/alimentometro-wrapper.svg?branch=master)](https://travis-ci.org/alanpinhel/alimentometro-wrapper) [![Coverage Status](https://coveralls.io/repos/github/alanpinhel/alimentometro-wrapper/badge.svg?branch=master)](https://coveralls.io/github/alanpinhel/alimentometro-wrapper?branch=master) ![Badge size](https://badge-size.herokuapp.com/alanpinhel/alimentometro-wrapper/master/dist/alimentometro-wrapper.umd.min.js.svg) ![Badge gzip size](https://badge-size.herokuapp.com/alanpinhel/alimentometro-wrapper/master/dist/alimentometro-wrapper.umd.min.js.svg?compression=gzip)
 
 Wrapper para trabalhar com a [Relação de Fatores de Correção e Índice de Conversão (Cocção de Alimentos)](https://docs.ufpr.br/~monica.anjos/Fatores.pdf).
 

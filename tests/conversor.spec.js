@@ -3,12 +3,6 @@ import { expect } from 'chai';
 import converteParaPesagemHumana from '../src/conversor';
 
 describe('Conversor', () => {
-  describe('smoke tests', () => {
-    it('deve existir o método converteParaPesagemHumana', () => {
-      expect(converteParaPesagemHumana).to.exist;
-    });
-  });
-
   describe('converteParaPesagemHumana', () => {
     it('converteParaPesagemHumana(0) deve retornar 0g', () => {
       expect(converteParaPesagemHumana(0)).to.equal('0g');

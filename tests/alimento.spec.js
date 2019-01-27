@@ -1,45 +1,35 @@
 import { expect } from 'chai';
-import mock from 'mock-require';
 
-import getPesoBrutoAlimentoPorId from '../src/alimento';
+import Alimento from '../src/alimento';
 
 describe('Alimento', () => {
-  const alimentos = [
-    {
-      id: 1,
-      nome: 'Abacate',
-      fatorCorrecao: 1.46,
-      indiceConversao: 1,
-    },
-    {
-      id: 2,
-      nome: 'Arroz Polido',
-      fatorCorrecao: 1,
-      indiceConversao: 2.33,
-    },
-  ];
-
-  beforeEach(() => {
-    mock('../src/alimentos.json', alimentos);
+  it('deve criar uma instância de Alimento', () => {
+    const alimento = new Alimento();
+    expect(alimento).to.be.an.instanceOf(Alimento);
   });
 
-  afterEach(() => {
-    mock.stop('../src/alimentos.json');
+  it('deve receber id como parâmetro', () => {
+    const alimento = new Alimento(1);
+    expect(alimento.id).to.be.equal(1);
   });
 
-  describe('smoke tests', () => {
-    it('deve existir o método getPesoBrutoAlimentoPorId', () => {
-      expect(getPesoBrutoAlimentoPorId).to.exist;
-    });
+  it('deve receber nome como parâmetro', () => {
+    const alimento = new Alimento(1, 'Abacaxi');
+    expect(alimento.nome).to.be.equal('Abacaxi');
   });
 
-  describe('getPesoBrutoAlimentoPorId', () => {
-    it(`getPesoBrutoAlimentoPorId(1) deve retornar 1.460 para o peso bruto de uma grama do alimento de id 1`, () => {
-      expect(getPesoBrutoAlimentoPorId(1)).to.be.equal(1.460);
-    });
+  it('deve receber fator de correção como parâmetro', () => {
+    const alimento = new Alimento(1, 'Abacaxi', 1.46);
+    expect(alimento.fatorCorrecao).to.be.equal(1.46);
+  });
 
-    it(`getPesoBrutoAlimentoPorId(2) deve retornar 0.429 para o peso bruto de uma grama do alimento de id 2`, () => {
-      expect(getPesoBrutoAlimentoPorId(2)).to.be.equal(0.429);
-    });
+  it('deve receber índice de conversão como parâmetro', () => {
+    const alimento = new Alimento(1, 'Abacaxi', 1.46, 1);
+    expect(alimento.indiceConversao).to.be.equal(1);
+  });
+
+  it('deve retornar peso bruto equivalente a um grama de peso processado', () => {
+    const alimento = new Alimento(1, 'Abacaxi', 1.46, 1);
+    expect(alimento.pesoBruto).to.be.equal(1.460);
   });
 });

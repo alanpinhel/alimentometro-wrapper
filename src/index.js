@@ -1,21 +1,8 @@
-import {
-  getAlimentos,
-  getAlimentoPorId,
-  getAlimentosComNomeIniciadoPor,
-} from './alimentos';
+import Alimento from './alimento';
 
-import {
-  getPesoBrutoAlimentoPorId,
-} from './alimento';
-
-import {
-  converteParaPesagemHumana,
-} from './conversor';
-
-module.exports = {
-  getAlimentos,
-  getAlimentoPorId,
-  getAlimentosComNomeIniciadoPor,
-  getPesoBrutoAlimentoPorId,
-  converteParaPesagemHumana,
-};
+export default class AlimentometroWrapper {
+  getAlimentos() {
+    return require('../data/alimentos.json').map((a) =>
+      new Alimento(a.id, a.nome, a.fatorCorrecao, a.indiceConversao));
+  }
+}

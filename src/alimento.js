@@ -1,7 +1,12 @@
-import { getAlimentoPorId } from './alimentos';
+export default class Alimento {
+  constructor(id, nome, fatorCorrecao, indiceConversao) {
+    this.id = id;
+    this.nome = nome;
+    this.fatorCorrecao = fatorCorrecao;
+    this.indiceConversao = indiceConversao;
+  }
 
-export default function getPesoBrutoAlimentoPorId(id) {
-  const alimento = getAlimentoPorId(id);
-  const umGrama = 1;
-  return +((umGrama / alimento.indiceConversao) * alimento.fatorCorrecao).toFixed(3);
+  get pesoBruto() {
+    return +((1 / this.indiceConversao) * this.fatorCorrecao).toFixed(3);
+  }
 }

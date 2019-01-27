@@ -1,6 +1,6 @@
 # Alimentômetro Wrapper
 
-[![Build Status](https://travis-ci.org/alanpinhel/alimentometro-wrapper.svg?branch=master)](https://travis-ci.org/alanpinhel/alimentometro-wrapper) [![Coverage Status](https://coveralls.io/repos/github/alanpinhel/alimentometro-wrapper/badge.svg?branch=master)](https://coveralls.io/github/alanpinhel/alimentometro-wrapper?branch=master)
+[![Build Status](https://travis-ci.org/alanpinhel/alimentometro-wrapper.svg?branch=master)](https://travis-ci.org/alanpinhel/alimentometro-wrapper) [![Coverage Status](https://coveralls.io/repos/github/alanpinhel/alimentometro-wrapper/badge.svg?branch=master)](https://coveralls.io/github/alanpinhel/alimentometro-wrapper?branch=master) ![Badge size](https://badge-size.herokuapp.com/alanpinhel/alimentometro-wrapper/master/dist/alimentometro-wrapper.min.js.svg) ![Badge gzip size](https://badge-size.herokuapp.com/alanpinhel/alimentometro-wrapper/master/dist/alimentometro-wrapper.min.js.svg?compression=gzip)
 
 Wrapper para trabalhar com a [Relação de Fatores de Correção e Índice de Conversão (Cocção de Alimentos)](https://docs.ufpr.br/~monica.anjos/Fatores.pdf).
 
@@ -18,76 +18,17 @@ Esta biblioteca faz uso da [API de internacionalização](https://caniuse.com/#f
 $ npm install alimentometro-wrapper --save
 ```
 
+
 ## Como usar
 
 ### ES6
 
-```js
-// to import a specific method
-import SpotifyWrapper from 'spotify-wrapper';
-
-const spotify = new SpotifyWrapper({
-  token: 'YOUR_TOKEN_HERE'
-});
-
-// using  method
-spotify.search.artists('Incubus');
-```
-
 ### CommonJS
-
-```js
-const SpotifyWrapper = require('spotify-wrapper').default;
-
-const spotify = new SpotifyWrapper({
-  token: 'YOUR_TOKEN_HERE'
-});
-```
 
 ### UMD in Browser
 
-```html
-<!-- to import non-minified version -->
-<script src="spotify-wrapper.umd.js"></script>
-
-<!-- to import minified version -->
-<script src="spotify-wrapper.umd.min.js"></script>
-```
-
-After that the library will be available to the Global as `SpotifyWrapper`. Follow an example:
-
-```js
-
-const spotify = new SpotifyWrapper({
-  token: 'YOUR_TOKEN_HERE'
-});
-
-const albums = spotify.search.albums('Choosen Artist');
-```
-
 ## Métodos
 
-> Follow the methods that the library provides.
-
-### search.albums(query)
-
-> Search for informations about Albums with provided query. Test in [Spotify Web Console](https://developer.spotify.com/web-api/console/get-search-item/) with type defined as *album*.
-
-**Arguments**
-
-| Argument | Type    | Options           |
-|----------|---------|-------------------|
-|`query`   |*string* | 'Any search query'|
-
-
-**Example**
-
-```js
-spotify.search.albums('Incubus')
-  .then(data => {
-    // do what you want with the data
-  })
-```
 
 ## Contribuição
 

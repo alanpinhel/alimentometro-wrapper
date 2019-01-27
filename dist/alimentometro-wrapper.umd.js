@@ -102,9 +102,10 @@ var AlimentometroWrapper = function () {
     _classCallCheck(this, AlimentometroWrapper);
   }
 
-  _createClass(AlimentometroWrapper, [{
+  _createClass(AlimentometroWrapper, null, [{
     key: 'getAlimentos',
     value: function getAlimentos() {
+      /* eslint-disable global-require */
       return __webpack_require__(1).map(function (a) {
         return new _alimento2.default(a.id, a.nome, a.fatorCorrecao, a.indiceConversao);
       });

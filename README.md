@@ -80,7 +80,7 @@ aw.getAlimentos()
 **Exemplo**
 
 ```js
-aw.formata(1523); // saída: "1.523kg"
+aw.formata(1523); // saída: "1,523kg"
 ```
 
 ## Contribuição

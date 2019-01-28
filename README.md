@@ -18,17 +18,70 @@ Esta biblioteca faz uso da [API de internacionalização](https://caniuse.com/#f
 $ npm install alimentometro-wrapper --save
 ```
 
-
 ## Como usar
 
 ### ES6
 
+```js
+import aw from 'alimentometro-wrapper';
+
+aw.getAlimentos();
+```
+
 ### CommonJS
 
-### UMD in Browser
+```js
+const aw = require('alimentometro-wrapper').default;
+```
+
+### UMD no Navegador
+
+```html
+<!-- importação da versão não minificada -->
+<script src="alimentometro-wrapper.umd.js"></script>
+
+<!-- importação da versão minificada -->
+<script src="alimentometro-wrapper.umd.min.js"></script>
+```
+
+Depois disso, a biblioteca estará disponível globalmente como AlimentoMetroWrapper. Veja um exemplo:
+
+```js
+AlimentometroWrapper.getAlimentos();
+```
 
 ## Métodos
 
+> Veja os métodos que a biblioteca fornece.
+
+### getAlimentos()
+
+> Busca os principais alimentos com informações de nome, fator de correção, índice de conversão e peso bruto equivalente a um grama de peso processado.
+
+**Exemplo**
+
+```js
+aw.getAlimentos()
+  .map(alimento => {
+    // faça o que quiser com os dados
+  })
+```
+
+### formata(peso)
+
+> Realiza a formatação de um valor númerico para o padrão humano para facilitar na leitura.
+
+**Parâmetros**
+
+| Parâmetro | Tipo    | Opções                   |
+|-----------|---------|--------------------------|
+|`peso`     |*number* | 'Peso em gramas'         |
+
+**Exemplo**
+
+```js
+aw.formata(1523); // saída: "1.523kg"
+```
 
 ## Contribuição
 

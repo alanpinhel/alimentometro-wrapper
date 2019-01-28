@@ -1,7 +1,7 @@
 {
   "name": "alimentometro-wrapper",
   "version": "1.0.0",
-  "description": "Um wrapper para trabalhar com a Relação de Fatores de Correção e Índice de Conversão (Cocção de Alimentos).",
+  "description": "Wrapper para trabalhar com a Relação de Fatores de Correção e Índice de Conversão (Cocção de Alimentos).",
   "main": "lib/index.js",
   "scripts": {
     "clear": "rimraf lib",

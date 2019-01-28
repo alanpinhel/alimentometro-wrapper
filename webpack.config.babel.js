@@ -7,7 +7,7 @@ export default {
   output: {
     path: join(__dirname, 'dist'),
     libraryTarget: 'umd',
-    library: 'alimentometroWrapper',
+    library: 'AlimentometroWrapper',
   },
   devtool: 'source-map',
   module: {

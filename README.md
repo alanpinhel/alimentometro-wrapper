@@ -44,7 +44,7 @@ const aw = require('alimentometro-wrapper').default;
 <script src="alimentometro-wrapper.umd.min.js"></script>
 ```
 
-Depois disso, a biblioteca estará disponível globalmente como AlimentoMetroWrapper. Veja um exemplo:
+Depois disso, a biblioteca estará disponível globalmente como AlimentometroWrapper. Veja um exemplo:
 
 ```js
 AlimentometroWrapper.getAlimentos();

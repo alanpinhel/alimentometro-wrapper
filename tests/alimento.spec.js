@@ -28,7 +28,7 @@ describe('Alimento', () => {
     expect(alimento.indiceConversao).to.be.equal(1);
   });
 
-  it('deve retornar peso bruto equivalente a um grama de peso processado', () => {
+  it('deve retornar peso bruto igual um grama de peso processado', () => {
     const alimento = new Alimento(1, 'Abacaxi', 1.46, 1);
     expect(alimento.pesoBruto).to.be.equal(1.460);
   });

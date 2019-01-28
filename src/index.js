@@ -6,4 +6,17 @@ export default class AlimentometroWrapper {
     return alimentos.map(a =>
       new Alimento(a.id, a.nome, a.fatorCorrecao, a.indiceConversao));
   }
+
+  static formata(peso = 0) {
+    if (!peso || peso < 0) {
+      return '0g';
+    }
+
+    if (peso < 1000) {
+      return `${Math.ceil(peso)}g`;
+    }
+
+    const nf = new Intl.NumberFormat('pt-BR');
+    return `${nf.format(peso / 1000)}kg`;
+  }
 }

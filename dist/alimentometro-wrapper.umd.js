@@ -93,6 +93,10 @@ var _alimento = __webpack_require__(3);
 
 var _alimento2 = _interopRequireDefault(_alimento);
 
+var _alimentos = __webpack_require__(1);
+
+var _alimentos2 = _interopRequireDefault(_alimentos);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -105,10 +109,25 @@ var AlimentometroWrapper = function () {
   _createClass(AlimentometroWrapper, null, [{
     key: 'getAlimentos',
     value: function getAlimentos() {
-      /* eslint-disable global-require */
-      return __webpack_require__(1).map(function (a) {
+      return _alimentos2.default.map(function (a) {
         return new _alimento2.default(a.id, a.nome, a.fatorCorrecao, a.indiceConversao);
       });
+    }
+  }, {
+    key: 'formata',
+    value: function formata() {
+      var peso = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+
+      if (!peso || peso < 0) {
+        return '0g';
+      }
+
+      if (peso < 1000) {
+        return Math.ceil(peso) + 'g';
+      }
+
+      var nf = new Intl.NumberFormat('pt-BR');
+      return nf.format(peso / 1000) + 'kg';
     }
   }]);
 

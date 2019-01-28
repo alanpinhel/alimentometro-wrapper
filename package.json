@@ -1,6 +1,6 @@
 {
   "name": "alimentometro-wrapper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wrapper para trabalhar com a Relação de Fatores de Correção e Índice de Conversão (Cocção de Alimentos).",
   "main": "lib/index.js",
   "scripts": {

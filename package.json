@@ -16,7 +16,7 @@
     "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
     "test:coverage": "nyc npm test",
     "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls",
-    "publish": "npm run build:all && npm publish"
+    "build:publish": "npm run build:all && npm publish"
   },
   "files": [
     "dist",

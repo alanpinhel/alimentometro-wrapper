@@ -1,6 +1,6 @@
 {
   "name": "alimentometro-wrapper",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Wrapper para trabalhar com a Relação de Fatores de Correção e Índice de Conversão (Cocção de Alimentos).",
   "main": "lib/index.js",
   "scripts": {
@@ -15,7 +15,8 @@
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
     "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
     "test:coverage": "nyc npm test",
-    "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls"
+    "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls",
+    "publish": "npm run build:all && npm publish"
   },
   "files": [
     "dist",
